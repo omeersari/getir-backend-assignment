@@ -1,10 +1,10 @@
 const express = require("express");
-const app = express();
-require("dotenv").config();
-
+const errorHandler = require("./middlewares/errorHandler");
 const router  = require("./routes");
 const db = require("./helper/db");
-const errorHandler = require("./middlewares/errorHandler");
+require("dotenv").config();
+
+const app = express();
 app.use(express.json());
 
 db() // db connection
