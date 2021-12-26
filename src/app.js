@@ -10,7 +10,7 @@ app.use(express.json());
 db() // db connection
 app.listen(process.env.PORT, () => {
     console.log(`Listening on ${process.env.PORT}`)
-    app.use('/', router)
+    app.use('/api', router)
     
     // error messages and logs for other EPs.
     app.use((req, res, next) => {
