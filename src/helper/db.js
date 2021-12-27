@@ -7,4 +7,11 @@ const connectToMongo = () => {
     };
 }
 
-module.exports = connectToMongo
+const disconnetToMongo = async () => {
+    return await mongoose.disconnect()
+}
+
+module.exports = {
+  connectToMongo,
+  disconnetToMongo
+}

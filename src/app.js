@@ -1,14 +1,16 @@
 const express = require("express");
+const app = express();
 const errorHandler = require("./middlewares/errorHandler");
 const router  = require("./routes");
-const db = require("./helper/db");
+const db =  require("./helper/db");
 require("dotenv").config();
 
-const app = express();
+
 app.use(express.json());
 
-db() // db connection
-app.listen(process.env.PORT, () => {
+db.connectToMongo() // db connection
+
+const server = app.listen(process.env.PORT, () => {
     console.log(`Listening on ${process.env.PORT}`)
     app.use('/api', router)
     
@@ -19,6 +21,6 @@ app.listen(process.env.PORT, () => {
         next(error);
     });
     app.use(errorHandler)
-})
+}) 
 
-
+module.exports = server
