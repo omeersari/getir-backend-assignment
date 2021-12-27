@@ -1,4 +1,4 @@
-const Joi = require("Joi");
+const Joi = require("joi");
 
 const recordValidation = Joi.object().keys({
     startDate: Joi.date().iso().required(),
