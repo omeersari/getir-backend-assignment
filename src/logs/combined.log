@@ -7,3 +7,6 @@
 {"level":"error","message":{"message":"There is no such EP","status":404},"service":"error-service"}
 {"level":"error","message":{"message":"There is no such EP","status":404},"service":"error-service"}
 {"level":"error","message":{"message":"There is no such EP","status":404},"service":"error-service"}
+{"level":"error","message":{"message":"Unexpected token } in JSON at position 100","status":400},"service":"error-service"}
+{"level":"error","message":{"message":"There is no such EP","status":404},"service":"error-service"}
+{"level":"error","message":{"message":"There is no such EP","status":404},"service":"error-service"}
