@@ -75,15 +75,15 @@ Any missing parameter will return a response such as:
 
 In this section I sum up the whole project.
 
-In my **app.js** I basically require express, do mongoDB connection, import my route and listen the server. `Routes` only includes one route which is the `/api` route. This route takes two functions in it. One is valitadion and other is controller. Before we can call controller validate function should validate the schema. This function uses **Joi** to validate the schema and if so `postMethod` is called. If not we see a 400 BAD REQUEST and an error message as stated above.
+In my **app.js** I basically require express, do mongoDB connection, import my route and listen the server. `Routes` only includes one route which is the `/api` route. This route takes two functions in it. One is valitadion and other is controller. Before we call controller, validate function should validate the schema. This function uses **Joi** to validate the schema and if so `postMethod` is called. If not, we see a 400 BAD REQUEST and an error message as stated above.
 
-`postMethod` is going to make the query with using model schema and `recordService`. In `recordService` we basically matches the body parameters with the data in records collection and shows the result with the fields that we want to see. If everything works without an error we see a respond. (A respond payload can be seen above).
+`postMethod` is going to make the query with using model schema and `recordService`. In `recordService` we basically matches the body parameters with the data in records collection and shows the result with the fields that we want to see. If everything works without an error, we see a respond. (A respond payload can be seen above).
 
-For other endpoints there is a little code which handles errors and logs it to a log file. There are a few examples in that folder already. 
+For other endpoints there is code which handles errors and logs it to a log file. There are a few examples in that folder already. 
 
-Jest is used to code test for 3 cases. One for successful post request, one for unsuccessful post request and one for unexisting endpoint.
+Jest is used to test 3 cases. One for successful post request, one for unsuccessful post request and one for unexisting endpoint.
 
-To run test case you can simply open terminal and type:
+To run test case you can simply open terminal and run:
 
 ```
 npm run test
