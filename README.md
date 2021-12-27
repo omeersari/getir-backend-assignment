@@ -11,7 +11,6 @@ With yarn:
 ```
 yarn install
 yarn start
-
 ```
 
 # Used Tech and Libraries and Notes
@@ -28,7 +27,7 @@ yarn start
 
 To make a post request, go to this endpoint:
 
-    localhost:6100/api
+    https://getir-backendcase.herokuapp.com/api
 
 include these fields to body:
 
@@ -44,7 +43,7 @@ include these fields to body:
 
 You can send a request with curl such as: 
 
-`curl -X POST 'localhost:6100/api' -H 'Content-Type: application/json' -d '{"startDate": "2016-01-26", "endDate": "2018-01-01", "minCount": 2700, "maxCount": 3000}'`
+`curl -X POST 'https://getir-backendcase.herokuapp.com/api' -H 'Content-Type: application/json' -d '{"startDate": "2016-01-26", "endDate": "2018-01-01", "minCount": 2700, "maxCount": 3000}'`
 
 A successful request should return a response such as: 
 
@@ -52,16 +51,16 @@ A successful request should return a response such as:
     	"code": 0,
     	"msg": "Success",
     	"records": [
-   			{
-   				"key": "wtSjVcpg",
-   				"createdAt": "2016-02-22T11:13:43.165Z",
-   				"totalCount": 2888
-   			},
-   			{
-   				"key": "kkxEdhft",
-   				"createdAt": "2016-02-19T06:35:39.409Z",
-   				"totalCount": 2980
-   			}
+		{
+			"key": "wtSjVcpg",
+			"createdAt": "2016-02-22T11:13:43.165Z",
+			"totalCount": 2888
+		},
+		{
+			"key": "kkxEdhft",
+			"createdAt": "2016-02-19T06:35:39.409Z",
+			"totalCount": 2980
+		}
     }
 
 Any missing parameter will return a response such as:
@@ -88,7 +87,6 @@ To run test case you can simply open terminal and type:
 
 ```
 npm run test
-
 ```
 
 After test a warn is seen which says that use jest with --detectOpenHandles. For this it can be included in package.json or in terminal. 
