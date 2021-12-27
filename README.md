@@ -89,7 +89,7 @@ To run test case you can simply open terminal and type:
 npm run test
 ```
 
-After test a warn is seen which says that use jest with --detectOpenHandles. For this it can be included in package.json or in terminal. 
+After test, a warn is seen which says that use jest with --detectOpenHandles. For this it can be included in package.json or in terminal. 
 
 This is because mongoose is still connected and jest actually wants it to be disconnected. (I have tried various methods but couldn't figure it out.)
 
